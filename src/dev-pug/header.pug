@@ -1,0 +1,77 @@
+header.header
+  .header__container
+    .header__top
+      .header__logo
+        img(src="@img/logo.svg" alt="Logo")
+      .header__menu
+
+        .header__menu-top
+          button.header__menu-top-close
+          nav.header__nav
+            -
+              const navArr = [
+                  {
+                    name: "Главная",
+                    link: "#"
+                  },
+                  { 
+                    name:"Виды аренды",
+                    link: "#types"
+                  },
+                  {
+                    name: "Автопарк",
+                    link: "#catalog"
+                  },
+                  {
+                    name: "Условия",
+                    link: "#conditions"
+                  },
+                  {
+                    name: "Отзывы",
+                    link: "#reviews"
+                  },
+                  {
+                    name: "Контакты",
+                    link: "#contacts"
+                  }
+                ]
+            ul.header__nav-list
+              each i in navArr
+                li.header__nav-item
+                  a.header__nav-link(href= i.link)= i.name
+
+        .header__menu-bot
+          a.header__phone(href="tel:9999999999") 8 (999) 999-99-99
+          .header__apps
+            a.header__apps-link(href="#")
+              img(src="@img/AppStore.svg" alt="App Store")
+            a.header__apps-link(href="#")
+              img(src="@img/GooglePlay.svg" alt="Google Play")
+      .burger
+        span
+
+  .header__content
+    .header__container
+      h1.header__title
+        | Аренда <br><span>премиум автомобилей</span>
+      .arrows
+        button.arrows__left
+          <svg class="arrows__img">
+            <use xlink:href="img/sprite/sprite.svg#left"></use>
+          </svg>
+        span
+        button.arrows__right
+          <svg class="arrows__img">
+            <use xlink:href="img/sprite/sprite.svg#right"></use>
+          </svg>
+      .header__slider
+        .header__slider-slide(data-pos="-2")
+          img(src="@img/header/s1.jpg")
+        .header__slider-slide(data-pos="-1")
+          img(src="@img/header/s2.jpg")
+        .header__slider-slide(data-pos="0")
+          img(src="@img/header/s3.jpg")
+        .header__slider-slide(data-pos="1")
+          img(src="@img/header/s4.jpg")
+        .header__slider-slide(data-pos="2")
+          img(src="@img/header/s5.jpg")

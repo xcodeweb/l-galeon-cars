@@ -1,0 +1,26 @@
+section.contacts(id= "contacts")
+  .container
+    .contacts__item
+      h2.title.contacts__title КОНТАКТЫ
+      .contactsb
+        .contacts__img
+          <svg class="">
+            <use xlink:href="img/sprite/sprite.svg#location"></use>
+          </svg>
+        .contacts__text
+          span.contacts__caption Наш адрес:
+          a.contacts__value(href="#") Санкт-Петербург, Таежная улица, 37
+      .contactsb
+        .contacts__img
+          <svg class="">
+            <use xlink:href="@img/sprite/sprite.svg#message"></use>
+          </svg>
+        .contacts__text
+          span.contacts__caption Наша почта:
+          a.contacts__value(href="mailto:#") auto795y@gmail.com
+      .contacts__booking
+        a.btn.contacts__btn(href="#") ЗАКАЗАТЬ МАШИНУ
+        .contacts__booking-call
+          a.contacts__booking-phone(href="tel:+79999999999") +7 (999) 999-99-99
+          span.contacts__booking-desc Звоните или оставляйте заявку
+          

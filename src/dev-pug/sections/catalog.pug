@@ -1,0 +1,44 @@
+section.catalog(id="catalog")
+  .catalog__container
+    h2.catalog__title АВТОПАРК
+    .catalog__sub
+      ul.catalog__list
+        li.catalog__item Премиум
+        li.catalog__item Бизнес
+        li.catalog__item Спорт
+      .arrows.catalog__arrows
+        button.arrows__left
+          <svg class="arrows__img">
+            <use xlink:href="img/sprite/sprite.svg#left"></use>
+          </svg>
+        .arrow__progress
+          .arrow__bar
+        button.arrows__right
+          <svg class="arrows__img">
+            <use xlink:href="img/sprite/sprite.svg#right"></use>
+          </svg>
+    .catalog__swiper
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            img(src="@img/catalog/1.jpg" alt="")
+          </div>
+          <div class="swiper-slide">
+            img(src="@img/catalog/2.jpg")
+          </div>
+          <div class="swiper-slide">
+            img(src="@img/catalog/3.jpg")
+          </div>
+          <div class="swiper-slide">
+            img(src="@img/catalog/1.jpg")
+          </div>
+          <div class="swiper-slide">
+            img(src="@img/catalog/2.jpg")
+          </div>
+          <div class="swiper-slide">
+            img(src="@img/catalog/3.jpg")
+          </div>
+        </div>
+        .swiper-pagination
+      </div>
+

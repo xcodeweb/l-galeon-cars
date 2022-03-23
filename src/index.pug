@@ -1,0 +1,14 @@
+doctype html
+html(lang="ru")
+  include dev-pug/head
+  body
+    .wrapper
+      include dev-pug/header
+      main.main
+        include dev-pug/sections/types
+        include dev-pug/sections/catalog
+        include dev-pug/sections/conditions
+        include dev-pug/sections/reviews
+        include dev-pug/sections/contacts
+      include dev-pug/footer
+      script(src="./js/app.min.js")

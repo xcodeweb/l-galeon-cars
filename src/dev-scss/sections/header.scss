@@ -1,0 +1,201 @@
+.header {
+  position: relative;
+  padding-top: 25px;
+  color: #fff;
+  background-color: #15171e;
+  font-size: 18px;
+  overflow: hidden;
+  @media (max-width: 1280px) {
+    font-size: 16px;
+  }
+  @media (max-width: 1225px) {
+    font-size: 14px;
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo img {
+    @media (max-width: 1225px) {
+      height: 62px;
+    }
+  }
+  &__menu-top {
+    display: flex;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #505156;
+    transition: all 0.3s ease;
+    @media (max-width: 1000px) {
+      position: absolute;
+      z-index: 20;
+      flex-direction: column;
+      top: 0;
+      right: -100%;
+      bottom: -1px;
+      background-color: #000;
+    }
+    &--open {
+      transition: all 0.3s ease;
+      right: 0 !important;
+      @media (max-width: 450px) {
+        width: 100%;
+      }
+    }
+    &-close {
+      position: relative;
+      display: none;
+      height: 40px;
+      width: 40px;
+      margin-top: 20px;
+      margin-left: 20px;
+      &::before,
+      &::after {
+        position: absolute;
+        top: 45%;
+        right: 0;
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        opacity: 0.8;
+      }
+      &::before {
+        transform: rotate(45deg);
+      }
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+    &--open &-close {
+      display: block;
+    }
+  }
+  &__nav {
+    display: flex;
+    margin-right: 147px;
+    @media (max-width: 1310px) {
+      margin-right: 81px;
+    }
+    @media (max-width: 1225px) {
+      margin-right: 47px;
+    }
+    @media (max-width: 1000px) {
+      margin-top: 50px;
+    }
+  }
+  &__nav-list {
+    display: flex;
+    @media (max-width: 1000px) {
+      flex-direction: column;
+      margin-left: 20px;
+      margin-bottom: 30px;
+    }
+  }
+  &__nav-link {
+    font-family: Gilroy, sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+    line-height: 140%;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    mix-blend-mode: normal;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    &:hover {
+      color: #edc5a2;
+    }
+    @media (max-width: 1000px) {
+      font-size: 20px;
+    }
+  }
+  &__nav-item:not(:last-child) {
+    margin-right: 24px;
+    @media (max-width: 1000px) {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+  &__socials {
+    margin-left: auto;
+    @media (max-width: 1000px) {
+      margin-right: auto;
+    }
+  }
+  &__socials-img {
+    width: 25px;
+    height: 25px;
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+  &__menu-bot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    @media (max-width: 1000px) {
+      display: none;
+    }
+  }
+  &__phone {
+    font-family: Gilroy, sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+    line-height: 120%;
+    letter-spacing: 0.05em;
+    color: #edc5a2;
+    @media (max-width: 1000px) {
+      margin-right: 40px;
+      font-size: 22px;
+    }
+  }
+  &__apps {
+    & img {
+      @media (max-width: 1000px) {
+        height: 24px;
+      }
+    }
+  }
+  &__apps-link:not(:last-child) {
+    margin-right: 30px;
+    @media (max-width: 1000px) {
+      margin-right: 14px;
+    }
+  }
+  &__content {
+    height: 800px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    background-image: url("@img/header/header-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &__title {
+    margin-bottom: 30px;
+    font-family: Gilroy, sans-serif;
+    font-weight: 400;
+    font-size: 2em;
+    line-height: 42px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    & span {
+      font-family: Gilroy;
+      font-weight: 900;
+      font-size: 2em;
+      line-height: 92px;
+      letter-spacing: 0.1em;
+      color: black;
+      text-transform: uppercase;
+      filter: drop-shadow(0 0 3px #edc5a2);
+      @media (max-width: 580px) {
+        font-size: 32px;
+      }
+    }
+    @media (max-width: 580px) {
+      font-size: 22px;
+    }
+  }
+}

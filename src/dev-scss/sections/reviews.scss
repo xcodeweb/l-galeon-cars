@@ -1,0 +1,78 @@
+.reviews {
+  padding-top: 140px;
+  padding-bottom: 140px;
+  background-color: #000;
+  color: #fff;
+  &__clients-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 1190px) {
+      flex-direction: column;
+    }
+  }
+  &__clients-item {
+    display: flex;
+    margin-bottom: 30px;
+  }
+  &__clients-img {
+    margin-right: 8px;
+  }
+  &__clients-content {
+    color: #ffffff;
+    font-family: Gilroy, sans-serif;
+    opacity: 0.8;
+    &--active {
+      opacity: 1;
+    }
+  }
+  &__clients-name {
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 120%;
+    text-transform: uppercase;
+  }
+  &__clients-city {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: 0.05em;
+    mix-blend-mode: difference;
+  }
+}
+
+.reviews .swiper {
+  position: relative;
+  max-width: 584px;
+  height: auto;
+}
+
+.reviews .swiper-slide {
+  &-name {
+    margin-bottom: 17px;
+    font-family: Gilroy, sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 120%;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+  }
+  &-text {
+    margin-bottom: 17px;
+    font-family: Gilroy, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    opacity: 0.8;
+  }
+  &-stars {
+    display: flex;
+  }
+  &-star {
+    width: 20px;
+    height: 20px;
+  }
+}

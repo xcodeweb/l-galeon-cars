@@ -1,0 +1,102 @@
+section.reviews(id= "reviews")
+  .reviews__container
+    h2.reviews__title Всего: 1397<span>ОТЗЫВЫ НАШИХ КЛИЕНТОВ</span><br>Последние 5
+    .reviews__clients
+      ul.reviews__clients-list
+        -
+          const clients = [
+            {
+              imgSrc: "1.png",
+              name: "Евгений",
+              city: "Санкт-Петербург"
+            },
+            {
+              imgSrc: "2.png",
+              name: "Александр",
+              city: "Санкт-Петербург"
+            },
+            {
+              imgSrc: "3.png",
+              name: "Вячеслав",
+              city: "Санкт-Петербург"
+            },
+            {
+              imgSrc: "4.png",
+              name: "Елена",
+              city: "Санкт-Петербург"
+            },
+            {
+              imgSrc: "5.png",
+              name: "Евгений",
+              city: "Санкт-Петербург"
+            }
+          ];
+        each i in clients
+          li.reviews__clients-item
+            img(src= "@img/reviews/" + i.imgSrc).reviews__clients-img
+            .reviews__clients-content
+              p.reviews__clients-name= i.name
+              p.reviews__clients-city= i.city
+  .reviews__container
+    .reviews__slider
+      .arrows.review__arrows
+        button.arrows__left
+          <svg class="arrows__img">
+            <use xlink:href="img/sprite/sprite.svg#left"></use>
+          </svg>
+        .arrow__progress
+          .arrow__bar
+        button.arrows__right
+          <svg class="arrows__img">
+            <use xlink:href="img/sprite/sprite.svg#right"></use>
+          </svg>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            p.swiper-slide-name Евгений
+            p.swiper-slide-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio labore assumenda suscipit explicabo soluta quod adipisci eum esse maiores vel cupiditate, veniam voluptas omnis, saepe officia aut repellendus ipsa perspiciatis, repudiandae nam! Doloribus sed qui dolore? Suscipit, provident dolore! Rerum.
+            .swiper-slide-stars
+              - for (let i = 0; i < 5; i++)
+                <svg class="swiper-slide-star">
+                  <use xlink:href="img/sprite/sprite.svg#star"></use>
+                </svg>
+          </div>
+          <div class="swiper-slide">
+            p.swiper-slide-name Александр
+            p.swiper-slide-text Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita ullam nobis repellendus veniam laborum blanditiis dolores fugiat rerum? Omnis repellendus optio cumque reprehenderit earum minus deleniti alias neque ducimus, nihil possimus consequuntur eos similique ut ipsum expedita, itaque qui aut.
+            .swiper-slide-stars
+              - for (let i = 0; i < 5; i++)
+                <svg class="swiper-slide-star">
+                  <use xlink:href="img/sprite/sprite.svg#star"></use>
+                </svg>
+          </div>
+          <div class="swiper-slide">
+            p.swiper-slide-name Вячеслав
+            p.swiper-slide-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio labore assumenda suscipit explicabo soluta quod adipisci eum esse maiores vel cupiditate, veniam voluptas omnis, saepe officia aut repellendus ipsa perspiciatis, repudiandae nam! Doloribus sed qui dolore? Suscipit, provident dolore! Rerum.
+            .swiper-slide-stars
+              - for (let i = 0; i < 5; i++)
+                <svg class="swiper-slide-star">
+                  <use xlink:href="img/sprite/sprite.svg#star"></use>
+                </svg>
+          </div>
+          <div class="swiper-slide">
+            p.swiper-slide-name Елена
+            p.swiper-slide-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio labore assumenda suscipit explicabo soluta quod adipisci eum esse maiores vel cupiditate, veniam voluptas omnis, saepe officia aut repellendus ipsa perspiciatis, repudiandae nam! Doloribus sed qui dolore? Suscipit, provident dolore! Rerum.
+            .swiper-slide-stars
+              - for (let i = 0; i < 5; i++)
+                <svg class="swiper-slide-star">
+                  <use xlink:href="img/sprite/sprite.svg#star"></use>
+                </svg>
+          </div>
+          <div class="swiper-slide">
+            p.swiper-slide-name Евгений
+            p.swiper-slide-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio labore assumenda suscipit explicabo soluta quod adipisci eum esse maiores vel cupiditate, veniam voluptas omnis, saepe officia aut repellendus ipsa perspiciatis, repudiandae nam! Doloribus sed qui dolore? Suscipit, provident dolore! Rerum.
+            .swiper-slide-stars
+              - for (let i = 0; i < 5; i++)
+                <svg class="swiper-slide-star">
+                  <use xlink:href="img/sprite/sprite.svg#star"></use>
+                </svg>
+          </div>
+        </div>
+        .swiper-pagination
+      </div>
