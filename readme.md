@@ -1,5 +1,5 @@
 https://zcxcode.github.io/p__Galeon/
-# Учебный проект
+# Верстка макета
 
 ## Стек
 
