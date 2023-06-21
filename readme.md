@@ -1,5 +1,6 @@
-https://zcxcode.github.io/p__Galeon/
-# Верстка макета
+https://xcodeweb.github.io/l-galeon-cars
+
+# Верстка
 
 ## Стек
 
